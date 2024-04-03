@@ -1,10 +1,10 @@
 // ANavigation.js
-import NavItem from '../atoms/NavItem'
-import IconUser from '../atoms/IconUser'
-import IconTools from '../atoms/IconTools'
-import IconCode from '../atoms/IconCode'
-import IconMug from '../atoms/IconMug'
-import IconPaperPlane from '../atoms/IconPaperPlane'
+import NavItem from '@/components/atoms/NavItem'
+import IconUser from '@/components/atoms/IconUser'
+import IconTools from '@/components/atoms/IconTools'
+import IconCode from '@/components/atoms/IconCode'
+import IconMug from '@/components/atoms/IconMug'
+import IconPaperPlane from '@/components/atoms/IconPaperPlane'
 
 const navItems = [
   { href: '#about', Icon: IconUser },

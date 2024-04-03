@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// TODO faire tri des couleurs inutiles en fin de projet
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -127,7 +128,15 @@ module.exports = {
           700: '#fcfcfc',
           800: '#fdfdfd',
           900: '#fefefe'
-        }
+        },
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)'
+      },
+      backgroundColor: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
