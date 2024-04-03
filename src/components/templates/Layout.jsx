@@ -1,6 +1,6 @@
 import Navigation from '@/components/molecules/Navigation.jsx'
 import ScrollToTop from '@/components/molecules/ScrollToTop'
-import ThemeSwitcher from '@/components/organisms/ThemeSwitcher'
+import ThemeSwitcher from '@/components/molecules/ThemeSwitcher'
 import Header from '@/components/organisms/Header'
 
 function Layout({ children }) {

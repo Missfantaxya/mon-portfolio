@@ -1,14 +1,17 @@
-// TODO ajouter les icons
-const Toggle = ({ options, onToggle }) => {
+// Toggle.jsx
+
+// TODO faire disparaitre l'icon du thème actif
+const Toggle = ({ options, onToggle, style }) => {
   return (
-    <div className="flex space-x-2 justify-center">
+    <div className={style}>
       {options.map((option) => (
         <button
           key={option.value}
           onClick={() => onToggle(option.value)}
-          className="px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-150 primary-bg text-curent focus:outline-none focus:ring-2 focus:ring-offset-2"
+          className="px-4 py-4 text-sm font-medium rounded-full text-curent shadow-sm shadow-accent"
+          aria-label={option.aria}
         >
-          {option.label}
+          <option.Icon className="md:h-2 md:w-2" color="currentColor" />
         </button>
       ))}
     </div>
