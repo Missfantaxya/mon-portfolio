@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Thème Clair */
-:root {
+:root[data-theme='light'] {
   --color-primary: #d7ccc8; /* Timberwolf */
   --color-secondary: #cfd8dc; /* Platinum */
   --color-accent: #88a097; /* Cambridge Blue */
@@ -12,8 +12,27 @@
 }
 
 /* Thème Foncé */
+:root[data-theme='dark'] {
+  --color-primary: #6e1c3d; /* Tyrian Purple */
+  --color-secondary: #795548; /* Coffee */
+  --color-accent: #bcaaa4; /* Silver */
+  --color-text: #fffff0; /* Ivory */
+  --color-background: #263238; /* Gunmetal */
+}
+
+/* Thème Système */
+@media (prefers-color-scheme: light) {
+  :root[data-theme='system'] {
+    --color-primary: #d7ccc8; /* Timberwolf */
+    --color-secondary: #cfd8dc; /* Platinum */
+    --color-accent: #88a097; /* Cambridge Blue */
+    --color-text: #5d4037; /* Liver */
+    --color-background: #fafafa; /* Seasalt */
+  }
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme='system'] {
     --color-primary: #6e1c3d; /* Tyrian Purple */
     --color-secondary: #795548; /* Coffee */
     --color-accent: #bcaaa4; /* Silver */
@@ -21,7 +40,6 @@
     --color-background: #263238; /* Gunmetal */
   }
 }
-
 body {
   color: var(--color-text);
   background-color: var(--color-background);
