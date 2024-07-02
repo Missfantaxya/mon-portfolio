@@ -1,4 +1,4 @@
-// ANavigation.js
+// Navigation.js
 import NavItem from '@/components/atoms/NavItem'
 import IconUser from '@/components/atoms/IconUser'
 import IconTools from '@/components/atoms/IconTools'
@@ -16,7 +16,7 @@ const navItems = [
 
 const Navigation = () => {
   return (
-    <nav className=" w-screen fixed p-4 md:p-10 top-0 left-0 md:inset-y-1/4 md:left-0 md:w-16 lg:w-20 flex md:flex-col justify-around md:justify-center items-center md:space-y-8 primary-bg md:rounded-r-2xl z-10">
+    <nav className="w-screen fixed p-4 md:p-10 top-0 left-0 md:inset-y-1/4 md:left-0 md:w-16 lg:w-20 flex md:flex-col justify-around md:justify-center items-center md:space-y-8 primary-bg md:rounded-r-2xl z-10">
       {navItems.map(({ href, Icon }) => (
         <NavItem key={href} href={href} Icon={Icon} />
       ))}
