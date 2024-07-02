@@ -5,7 +5,7 @@ const ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-
+  // FIXME le retirer de l'écran quand on est en haut de page
   return (
     <div>
       <ButtonIcon

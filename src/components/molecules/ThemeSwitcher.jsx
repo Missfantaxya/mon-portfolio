@@ -7,6 +7,8 @@ import IconSun from '@/components/atoms/IconSun'
 import IconDesktop from '@/components/atoms/IconDesktop'
 
 const ThemeSwitcher = () => {
+  // FIXME fermé le dropdown une fois l'option choisie ??
+
   const [currentTheme, setCurrentTheme] = useState('system')
 
   const options = [
@@ -31,6 +33,7 @@ const ThemeSwitcher = () => {
   ]
 
   const handleThemeChange = (value) => {
+    // TODO retirer le console log
     console.log('Changement de thème en:', value)
     setCurrentTheme(value)
     if (value === 'system') {
@@ -56,6 +59,7 @@ const ThemeSwitcher = () => {
     (option) => option.value !== currentTheme
   )
 
+  // FIXME faire ronde les options à choisir
   return (
     <div className="fixed left-0 bottom-0 p-4 flex flex-col">
       <Dropdown
