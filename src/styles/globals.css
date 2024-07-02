@@ -2,28 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Thème Clair */
+:root[data-theme='light'] {
+  --color-primary: #d7ccc8; /* Timberwolf */
+  --color-secondary: #cfd8dc; /* Platinum */
+  --color-accent: #88a097; /* Cambridge Blue */
+  --color-text: #5d4037; /* Liver */
+  --color-background: #fafafa; /* Seasalt */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Thème Foncé */
+:root[data-theme='dark'] {
+  --color-primary: #6e1c3d; /* Tyrian Purple */
+  --color-secondary: #795548; /* Coffee */
+  --color-accent: #bcaaa4; /* Silver */
+  --color-text: #fffff0; /* Ivory */
+  --color-background: #263238; /* Gunmetal */
+}
+
+/* Thème Système */
+@media (prefers-color-scheme: light) {
+  :root[data-theme='system'] {
+    --color-primary: #d7ccc8; /* Timberwolf */
+    --color-secondary: #cfd8dc; /* Platinum */
+    --color-accent: #88a097; /* Cambridge Blue */
+    --color-text: #5d4037; /* Liver */
+    --color-background: #fafafa; /* Seasalt */
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root[data-theme='system'] {
+    --color-primary: #6e1c3d; /* Tyrian Purple */
+    --color-secondary: #795548; /* Coffee */
+    --color-accent: #bcaaa4; /* Silver */
+    --color-text: #fffff0; /* Ivory */
+    --color-background: #263238; /* Gunmetal */
+  }
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+a, .accent {
+  color: var(--color-accent);
+}
+
+/* Utiliser la couleur primaire et secondaire dans d'autres éléments au besoin */
+.primary-bg {
+  background-color: var(--color-primary);
+}
+
+.secondary-bg {
+  background-color: var(--color-secondary);
 }
 
 @layer utilities {
