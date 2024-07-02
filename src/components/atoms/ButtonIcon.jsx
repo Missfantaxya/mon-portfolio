@@ -1,4 +1,4 @@
-// ScrollTopButton.js
+// ButtonIcon.js
 
 const ButtonIcon = ({ Icon, onClick, style, aria }) => {
   return (
