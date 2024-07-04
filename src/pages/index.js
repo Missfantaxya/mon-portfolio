@@ -9,7 +9,7 @@ import Contact from '@/components/organisms/Contact'
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between px-12 md:px-24`}
+      className={`flex min-h-screen flex-col items-center justify-between px-6 md:px-24`}
     >
       <Layout>
         <About />

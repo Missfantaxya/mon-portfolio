@@ -1,11 +1,19 @@
 // SiteTitle.jsx
 
-const SiteTitle = () => {
+const SiteTitle = ({
+  SiteTitleStyle,
+  IdentityStyle,
+  FirstnameStyle,
+  LastnameStyle,
+  JobTitleStyle
+}) => {
   return (
-    <div className="text-3xl font-bold m-2">
-      <p>Alexia</p>
-      <p>Skrzypczak</p>
-      <p className="text-lg">Développeur Web & UX Designer</p>
+    <div className={SiteTitleStyle}>
+      <div className={IdentityStyle}>
+        <p className={FirstnameStyle}>Alexia</p>
+        <p className={LastnameStyle}>Skrzypczak</p>
+      </div>
+      <p className={JobTitleStyle}>Développeur Web & UX Designer</p>
     </div>
   )
 }
