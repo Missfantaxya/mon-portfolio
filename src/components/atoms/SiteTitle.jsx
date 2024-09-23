@@ -13,7 +13,8 @@ const SiteTitle = ({
         <p className={FirstnameStyle}>Alexia</p>
         <p className={LastnameStyle}>Skrzypczak</p>
       </div>
-      <p className={JobTitleStyle}>Développeur Web & UX Designer</p>
+      <p className={JobTitleStyle}>Développeuse Web </p>
+      {/* <p className={JobTitleStyle}>& UX Designer</p> */}
     </div>
   )
 }

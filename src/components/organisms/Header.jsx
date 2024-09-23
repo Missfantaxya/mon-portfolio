@@ -5,27 +5,26 @@ import SiteTitle from '@/components/atoms/SiteTitle'
 import Cta from '@/components/atoms/Cta'
 import HeroSection from '@/components/atoms/HeroSection'
 
-//* centrer le Cta
 const Header = () => {
   return (
-    <header className="relative h-dvh">
+    <header className="relative flex flex-col h-dvh landscape:w-9/12 landscape:px-2">
       <Navigation />
       <SiteTitle
-        SiteTitleStyle="space-y-2 absolute top-1/20 left-2"
-        IdentityStyle="text-xl font-semibold"
+        SiteTitleStyle=" mt-4 space-y-2"
+        IdentityStyle="portrait:text-[2vh] landscape:text-[2vw] font-semibold"
         FirstnameStyle="capitalize"
         LastnameStyle="uppercase"
-        JobTitleStyle="capitalize text-lg font-medium"
+        JobTitleStyle="capitalize portrait:text-[4vh] landscape:text-[4vw] font-medium"
       />
-      <div className="h-screen flex-grow flex items-center justify-center ">
+      <div className="flex flex-col grow items-center justify-evenly ">
         <HeroSection
           text="Créons le web de demain"
-          style="text-center text-4xl font-bold w-5/6 mx-auto"
+          style="text-center portrait:text-[7vh] landscape:text-[7vw] font-bold w-11/12 mx-auto text-accent"
         />
         <Cta
           text="Collaborons"
           aria="Aller à la section contact"
-          style="absolute mx-auto top-3/4 p-2 text-lg font-bold text-current rounded-3xl border-2 border-current bg-primary hover:bg-secondary"
+          style="mx-auto px-4 py-2 portrait:text-[4vh] landscape:text-[4vw] font-bold text-current rounded-full border-2 border-current bg-primary hover:bg-secondary"
         />
       </div>
     </header>
