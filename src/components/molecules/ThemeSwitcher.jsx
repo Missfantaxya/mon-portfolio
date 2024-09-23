@@ -60,9 +60,8 @@ const ThemeSwitcher = () => {
   )
 
   // FIXME faire ronde les options à choisir
-  // TODO arranger sens d'ouverture selon ecran
   return (
-    <div className="fixed right-0 top-0 p-4 flex flex-col">
+    <div className="fixed right-0 top-0 sm:left-0 sm:top-auto sm:bottom-0 p-4 flex flex-col">
       <Dropdown
         options={filteredOptions}
         onDropdown={handleThemeChange}
