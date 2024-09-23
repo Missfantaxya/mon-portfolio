@@ -16,7 +16,7 @@ const navItems = [
 
 const Navigation = () => {
   return (
-    <nav className="w-screen fixed p-4 md:p-10 bottom-0 left-0 md:inset-y-1/4 md:left-0 md:w-16 lg:w-20 flex md:flex-col justify-around md:justify-center items-center md:space-y-8 primary-bg md:rounded-r-2xl z-10">
+    <nav className="fixed p-4 left-0 flex justify-around items-center z-10 primary-bg portrait:w-screen portrait:bottom-0 landscape:min-h-min landscape:h-dvh landscape:p-10 landscape:w-1/12 landscape:flex-col landscape:rounded-r-2xl">
       {navItems.map(({ href, Icon }) => (
         <NavItem key={href} href={href} Icon={Icon} />
       ))}
