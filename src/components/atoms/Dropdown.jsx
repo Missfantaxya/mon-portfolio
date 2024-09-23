@@ -1,14 +1,10 @@
-// Dropdown.jsx
-
 import { useState, useEffect, useRef } from 'react'
 import ButtonIcon from '@/components/atoms/ButtonIcon'
 
 const Dropdown = ({ options, onDropdown, style, currentIcon }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [openUp, setOpenUp] = useState(false) // État pour déterminer la direction
-  const dropdownRef = useRef(null) // Utilisation de useRef pour référencer le dropdown
+  const dropdownRef = useRef(null)
 
-  // Détecte la place disponible dans la fenêtre lors de l'ouverture du dropdown
   const handleDropdown = () => {
     setIsOpen(!isOpen)
   }
@@ -28,30 +24,13 @@ const Dropdown = ({ options, onDropdown, style, currentIcon }) => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
 
-    // Cleanup pour éviter les fuites de mémoire
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [isOpen])
 
-  useEffect(() => {
-    if (isOpen && dropdownRef.current) {
-      const rect = dropdownRef.current.getBoundingClientRect()
-      const windowHeight = window.innerHeight
-      const spaceBelow = windowHeight - rect.bottom
-      const spaceAbove = rect.top
-
-      // Si l'espace en dessous est inférieur à la taille estimée du dropdown, ouvre vers le haut
-      if (spaceBelow < 150 && spaceAbove > 150) {
-        setOpenUp(true)
-      } else {
-        setOpenUp(false)
-      }
-    }
-  }, [isOpen])
-
   return (
-    <div className="w-max relative" ref={dropdownRef}>
+    <div className={`relative ${style}`} ref={dropdownRef}>
       <ButtonIcon
         Icon={currentIcon}
         onClick={handleDropdown}
@@ -59,11 +38,7 @@ const Dropdown = ({ options, onDropdown, style, currentIcon }) => {
         aria="Dropdown theme options"
       />
       {isOpen && (
-        <div
-          className={`flex flex-col content-center w-full absolute ${
-            openUp ? 'bottom-full my-2' : 'top-full my-2'
-          } bg-inherit z-50`}
-        >
+        <div className="flex flex-col items-center absolute top-full mt-2 bg-inherit z-50 w-full">
           {options.map((option) => (
             <ButtonIcon
               key={option.value}
@@ -72,7 +47,7 @@ const Dropdown = ({ options, onDropdown, style, currentIcon }) => {
                 onDropdown(option.value)
                 setIsOpen(false)
               }}
-              style="mx-auto p-2 text-sm font-medium rounded-full  hover:text-accent shadow-sm shadow-accent mt-1"
+              style="p-2 text-sm font-medium rounded-full hover:text-accent shadow-sm shadow-accent mt-1 flex items-center justify-center"
               aria={option.aria}
             />
           ))}
