@@ -1,4 +1,4 @@
-import Navigation from '@/components/molecules/Navigation.jsx'
+// import Navigation from '@/components/molecules/Navigation.jsx'
 import ScrollToTop from '@/components/molecules/ScrollToTop'
 import ThemeSwitcher from '@/components/molecules/ThemeSwitcher'
 import Header from '@/components/organisms/Header'
@@ -6,11 +6,10 @@ import Header from '@/components/organisms/Header'
 function Layout({ children }) {
   return (
     <>
-      <Header />
+      <Header className="relative min-h-screen" />
       <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24`}
+        className={`flex min-h-screen flex-col items-center justify-between md:px-24`}
       >
-        <Navigation />
         <ThemeSwitcher />
         {children}
         <ScrollToTop />

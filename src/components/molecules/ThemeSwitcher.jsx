@@ -31,7 +31,6 @@ const ThemeSwitcher = () => {
   ]
 
   const handleThemeChange = (value) => {
-    console.log('Changement de thème en:', value)
     setCurrentTheme(value)
     if (value === 'system') {
       document.documentElement.setAttribute('data-theme', value)
@@ -57,7 +56,7 @@ const ThemeSwitcher = () => {
   )
 
   return (
-    <div className="fixed left-0 bottom-0 p-4 flex flex-col">
+    <div className="fixed right-0 top-0 p-4 flex flex-col">
       <Dropdown
         options={filteredOptions}
         onDropdown={handleThemeChange}

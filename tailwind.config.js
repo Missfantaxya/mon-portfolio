@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      inset: {
+        '1/20': '5%'
+      },
       colors: {
         tyrian_purple: {
           DEFAULT: '#6e1c3d',
