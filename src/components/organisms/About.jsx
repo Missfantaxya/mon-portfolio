@@ -3,13 +3,16 @@
 import Image from 'next/image'
 import avatar from '@/../public/avatar.png'
 
+// TODO enlever la date de 2020 et retravailler le texte de présentation
+
 function About() {
   return (
-    <div>
-      <div className="bg-primary overflow-hidden rounded-full w-max mx-auto">
+    <div className="landscape:flex landscape:flex-row-reverse">
+      <div className="bg-primary overflow-hidden rounded-full w-max m-auto">
         <Image
-          className="mx-auto"
+          className="mx-auto portrait:h-1/4 landscape:h-full"
           src={avatar}
+          layout="responsive"
           width={150}
           height={150}
           alt="avatar"
