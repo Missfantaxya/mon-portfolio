@@ -1,8 +1,4 @@
 function Projects() {
-  return (
-    <section id="projects" className="h-dvh">
-      Projets
-    </section>
-  )
+  return <div>Projets</div>
 }
 export default Projects

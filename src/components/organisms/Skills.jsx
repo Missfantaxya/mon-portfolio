@@ -1,9 +1,5 @@
 function Skills() {
-  return (
-    <section id="skills" className="h-dvh">
-      Compétences
-    </section>
-  )
+  return <div>Compétences</div>
 }
 
 export default Skills

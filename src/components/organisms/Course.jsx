@@ -1,9 +1,5 @@
 function Course() {
-  return (
-    <section id="course" className="h-dvh">
-      Parcours
-    </section>
-  )
+  return <div>Parcours</div>
 }
 
 export default Course

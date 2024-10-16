@@ -1,9 +1,5 @@
 function Contact() {
-  return (
-    <section id="contact" className="h-dvh">
-      Contact
-    </section>
-  )
+  return <div>Contact</div>
 }
 
 export default Contact
