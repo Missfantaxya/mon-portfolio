@@ -6,6 +6,7 @@ const ScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   // FIXME le retirer de l'écran quand on est en haut de page
+  // FIXME le remonter pour qu'il ne soit pas sur la barre de navigation en version mobile
   return (
     <div>
       <ButtonIcon
