@@ -4,9 +4,7 @@ import ThemeSwitcher from '@/components/molecules/ThemeSwitcher'
 import Header from '@/components/organisms/Header'
 import Sections from '@/components/organisms/Sections'
 
-//TODO voir pour mettre les chidren correctement car dans index c'est pas bon
-
-function Layout({ children }) {
+function Layout() {
   return (
     <>
       <Header className="relative h-dvh" />
@@ -14,7 +12,7 @@ function Layout({ children }) {
         className={`flex h-dvh flex-col items-center justify-between md:px-24`}
       >
         <ThemeSwitcher />
-        <Sections children={children} />
+        <Sections />
         <ScrollToTop />
       </main>
     </>
